@@ -60,23 +60,10 @@ export function Hero() {
           </Stack>
 
           <Box>
-            {/* Placeholder for Hero Image */}
-            <Box
-              h={500}
-              w="100%"
-              bg="#E9C59D"
-              style={{
-                borderRadius: '20px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              {/* <Text c="white" fw={700} size="xl">
-                Hero Image Placeholder
-              </Text> */}
-              <Image src="/hero-1.svg" />
-            </Box>
+            <Image
+              src="/hero-1.svg"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
           </Box>
         </SimpleGrid>
       </Container>

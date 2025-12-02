@@ -1,4 +1,4 @@
-import { Anchor, Box, Button, Group, Text } from '@mantine/core';
+import { Anchor, Box, Button, Group, Image } from '@mantine/core';
 
 export function Header() {
   return (
@@ -6,9 +6,7 @@ export function Header() {
       <Group justify="space-between" h="100%">
         <Group gap="xs">
           {/* Placeholder for Logo - approximating the look with text for now */}
-          <Text fw={700} size="xl" ff="Poppins" c="adiba.9" style={{ fontSize: '28px' }}>
-            adiba
-          </Text>
+          <Image src="/logo.png" />
         </Group>
 
         <Group gap="xl">

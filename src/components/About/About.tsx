@@ -1,4 +1,4 @@
-import { Anchor, Box, Container, SimpleGrid, Stack, Text, Title } from '@mantine/core';
+import { Anchor, Box, Container, Image, SimpleGrid, Stack, Text, Title } from '@mantine/core';
 
 export function About() {
   return (
@@ -7,22 +7,7 @@ export function About() {
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing={60} verticalSpacing={40}>
           <Box>
             {/* Placeholder for the Network/Graph Image */}
-            <Box
-              h={500}
-              w="100%"
-              bg="#F8F9FA"
-              style={{
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                border: '1px dashed #CFD1D8',
-              }}
-            >
-              <Text c="dimmed" fw={500}>
-                Network Diagram Placeholder
-              </Text>
-            </Box>
+            <Image src="/network.png" />
           </Box>
 
           <Stack justify="center" gap="md">
