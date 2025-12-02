@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 import {
   Box,
   Button,
@@ -44,25 +45,46 @@ export function OurSolutions() {
     <Box py={80} bg="#FDF8F3">
       <Container size="xl">
         <Stack align="center" gap="md" mb={60}>
-          <Text c="#D38C3B" fw={600} style={{ letterSpacing: '1px', textTransform: 'uppercase' }}>
-            TRUSTED SOLUTIONS
-          </Text>
-          <Title
-            order={2}
-            ta="center"
-            style={{
-              fontSize: '3rem',
-              fontWeight: 600,
-              color: '#0A112A',
-              lineHeight: 1.2,
-            }}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
           >
-            Complete embedded <br /> finance solutions for your <br /> retail business.
-          </Title>
-          <Text c="dimmed" ta="center" size="lg" maw={600} mt="md">
-            Integrate banking seamlessly into your customer journey with our retail engine and
-            omnichannel API.
-          </Text>
+            <Text c="#D38C3B" fw={600} style={{ letterSpacing: '1px', textTransform: 'uppercase' }}>
+              TRUSTED SOLUTIONS
+            </Text>
+          </motion.div>
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+          >
+            <Title
+              order={2}
+              ta="center"
+              style={{
+                fontSize: '3rem',
+                fontWeight: 600,
+                color: '#0A112A',
+                lineHeight: 1.2,
+              }}
+            >
+              Complete embedded <br /> finance solutions for your <br /> retail business.
+            </Title>
+          </motion.div>
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.8 }}
+          >
+            <Text c="dimmed" ta="center" size="lg" maw={600} mt="md">
+              Integrate banking seamlessly into your customer journey with our retail engine and
+              omnichannel API.
+            </Text>
+          </motion.div>
         </Stack>
 
         <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing={30}>
@@ -86,9 +108,10 @@ export function OurSolutions() {
                       justifyContent: 'center',
                     }}
                   >
-                    <Text c="white" fw={500}>
+                    {/* <Text c="white" fw={500}>
                       Image Placeholder
-                    </Text>
+                    </Text> */}
+                    <Image src="solution-1.jpg" />
                   </Box>
                 </Card.Section>
 
@@ -119,6 +142,17 @@ export function OurSolutions() {
             </motion.div>
           ))}
         </SimpleGrid>
+        <Button
+          radius="xl"
+          size="lg"
+          mt="md"
+          justify="center"
+          style={{
+            width: 'fit-content',
+          }}
+        >
+          All Services <ArrowRight size={20} />
+        </Button>
       </Container>
     </Box>
   );
