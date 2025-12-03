@@ -1,0 +1,8 @@
+.hoverLink {
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.hoverLink:hover {
+  color: white;
+}

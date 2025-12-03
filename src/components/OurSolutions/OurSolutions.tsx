@@ -42,7 +42,7 @@ const solutions = [
 
 export function OurSolutions() {
   return (
-    <Box py={80} bg="#FDF8F3">
+    <Box py={80}>
       <Container size="xl">
         <Stack align="center" gap="md" mb={60}>
           <motion.div
@@ -142,17 +142,18 @@ export function OurSolutions() {
             </motion.div>
           ))}
         </SimpleGrid>
-        <Button
-          radius="xl"
-          size="lg"
-          mt="md"
-          justify="center"
-          style={{
-            width: 'fit-content',
-          }}
-        >
-          All Services <ArrowRight size={20} />
-        </Button>
+        <Group justify="center" mt={80}>
+          <Button
+            radius="xl"
+            size="lg"
+            mt="md"
+            style={{
+              width: 'fit-content',
+            }}
+          >
+            All Services <ArrowRight size={20} />
+          </Button>
+        </Group>
       </Container>
     </Box>
   );

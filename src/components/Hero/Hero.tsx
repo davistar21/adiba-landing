@@ -25,11 +25,11 @@ export function Hero() {
               <Title
                 order={1}
                 style={{
-                  fontSize: '3.5rem',
-                  fontWeight: 600,
                   lineHeight: 1.2,
                   color: '#0A112A', // Dark navy from theme/image
                 }}
+                fz={{ base: '2.5rem', md: '3.5rem' }}
+                fw={600}
               >
                 Your Turnkey Banking Platform for{' '}
                 <Text component="span" c="#D38C3B" inherit>

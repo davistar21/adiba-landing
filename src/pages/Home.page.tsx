@@ -1,4 +1,5 @@
 import { About } from '../components/About/About';
+import { Banner } from '../components/Banner/Banner';
 import { Benefits } from '../components/Benefits/Benefits';
 import { Hero } from '../components/Hero/Hero';
 import { OurSolutions } from '../components/OurSolutions/OurSolutions';
@@ -9,6 +10,7 @@ export function HomePage() {
     <>
       <Hero />
       <About />
+      <Banner />
       <OurSolutions />
       <TechnicalFeatures />
       <Benefits />

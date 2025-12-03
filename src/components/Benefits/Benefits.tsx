@@ -3,6 +3,7 @@ import { BarChart, Settings, ShieldCheck, Zap } from 'lucide-react';
 import {
   Box,
   Container,
+  Grid,
   Group,
   Image,
   SimpleGrid,
@@ -41,7 +42,7 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <Box py={100} bg="white">
+    <Box py={100}>
       <Container size="xl">
         <SimpleGrid cols={{ base: 1, lg: 2 }} spacing={60} verticalSpacing={40}>
           {/* Left Column: Text Content */}
@@ -105,8 +106,9 @@ export function Benefits() {
           </Stack>
 
           {/* Right Column: Image Collage */}
-          <Box>
-            <SimpleGrid cols={2} spacing="md">
+
+          <Grid>
+            <Grid.Col span={{ base: 6, md: 6 }}>
               <motion.div
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -123,14 +125,16 @@ export function Benefits() {
                   />
                 </Box>
               </motion.div>
+            </Grid.Col>
+            <Grid.Col span={{ base: 6, md: 6 }}>
               <motion.div
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                style={{ marginTop: '40px' }}
+                style={{ marginTop: '100%' }}
               >
-                <Box h={300} bg="#E9ECEF" style={{ borderRadius: '16px', overflow: 'hidden' }}>
+                <Box h={250} bg="#E9ECEF" style={{ borderRadius: '16px', overflow: 'hidden' }}>
                   <Image
                     src="/collage-2.jpg"
                     h="100%"
@@ -140,25 +144,26 @@ export function Benefits() {
                   />
                 </Box>
               </motion.div>
-            </SimpleGrid>
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              style={{ marginTop: '20px' }}
-            >
-              <Box h={350} bg="#E9ECEF" style={{ borderRadius: '16px', overflow: 'hidden' }}>
-                <Image
-                  src="/collage-3.jpg"
-                  h="100%"
-                  w="100%"
-                  fit="cover"
-                  fallbackSrc="https://placehold.co/800x400?text=Image+3"
-                />
-              </Box>
-            </motion.div>
-          </Box>
+            </Grid.Col>
+            <Grid.Col span={{ base: 6, md: 6 }}>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <Box h={300} bg="#E9ECEF" style={{ borderRadius: '16px', overflow: 'hidden' }}>
+                  <Image
+                    src="/collage-3.jpg"
+                    h="100%"
+                    w="100%"
+                    fit="cover"
+                    fallbackSrc="https://placehold.co/800x400?text=Image+3"
+                  />
+                </Box>
+              </motion.div>
+            </Grid.Col>
+          </Grid>
         </SimpleGrid>
       </Container>
     </Box>

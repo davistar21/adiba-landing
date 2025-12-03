@@ -44,16 +44,27 @@ const features = [
 export function TechnicalFeatures() {
   return (
     <Box
-      py={100}
+      py={250}
       style={{
         position: 'relative',
         overflow: 'hidden',
-        backgroundImage: 'url(/curly-rectangle-bg.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+        // backgroundImage: 'url(/curly-rectangle-bg.png)',
+        // backgroundSize: 'cover',
+        // backgroundPosition: 'center',
+        // backgroundRepeat: 'no-repeat',
       }}
     >
+      <Image
+        src="/curly-rectangle-bg.png"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'contain',
+        }}
+      />
       <Container size="xl" style={{ position: 'relative', zIndex: 1 }}>
         <Stack align="center" gap="md" mb={80}>
           <Text c="#D38C3B" fw={600} style={{ letterSpacing: '1px', textTransform: 'uppercase' }}>
@@ -80,7 +91,7 @@ export function TechnicalFeatures() {
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
             >
               <Card padding="xl" radius="lg" bg="white" shadow="sm">
                 <ThemeIcon size={60} radius="xl" color="#FDF8F3" mb="md">
@@ -128,8 +139,8 @@ export function TechnicalFeatures() {
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              style={{ width: '100%', maxWidth: '350px' }}
+              viewport={{ once: true, amount: 0.5 }}
+              style={{ width: '100%', maxWidth: '400px' }}
             >
               <Image src="/tilted-phone.png" w="100%" />
             </motion.div>
@@ -142,7 +153,7 @@ export function TechnicalFeatures() {
               initial={{ x: 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.5 }}
             >
               <Card padding="xl" radius="lg" bg="white" shadow="sm">
                 <ThemeIcon size={60} radius="xl" color="#FDF8F3" mb="md">

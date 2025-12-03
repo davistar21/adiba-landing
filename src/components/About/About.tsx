@@ -36,11 +36,11 @@ export function About() {
               <Title
                 order={2}
                 style={{
-                  fontSize: '2.5rem',
-                  fontWeight: 600,
                   color: '#0A112A',
                   marginBottom: '1rem',
                 }}
+                fz={{ base: '2rem', md: '2.5rem' }}
+                fw={600}
               >
                 Innovate Faster, Cheaper
               </Title>
