@@ -8,6 +8,7 @@ import {
   Group,
   Image,
   Input,
+  SimpleGrid,
   Stack,
   Text,
   Title,
@@ -46,22 +47,24 @@ export function Footer() {
             border: '1px solid #E9ECEF',
           }}
         >
-          <Group justify="space-between" align="center">
+          <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="xl" verticalSpacing="md">
             <Title order={3} size="h2" c="#0A112A">
               Start building your own banking <br /> service
             </Title>
-            <Button
-              size="lg"
-              color="#0A112A"
-              radius="xl"
-              rightSection={<ArrowRight size={20} />}
-              styles={{
-                root: { backgroundColor: '#0A112A', paddingLeft: 30, paddingRight: 30 },
-              }}
-            >
-              Talk to us
-            </Button>
-          </Group>
+            <Group justify="flex-end" align="center">
+              <Button
+                size="lg"
+                color="#0A112A"
+                radius="xl"
+                rightSection={<ArrowRight size={20} />}
+                styles={{
+                  root: { backgroundColor: '#0A112A', paddingLeft: 30, paddingRight: 30 },
+                }}
+              >
+                Talk to us
+              </Button>
+            </Group>
+          </SimpleGrid>
         </Box>
       </Container>
 

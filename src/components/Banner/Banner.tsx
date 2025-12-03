@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { Box, Button, Container, Group, Text, Title } from '@mantine/core';
+import { Box, Button, Container, SimpleGrid, Text, Title } from '@mantine/core';
 
 export function Banner() {
   return (

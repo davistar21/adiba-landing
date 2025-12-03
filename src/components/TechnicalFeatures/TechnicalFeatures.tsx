@@ -83,7 +83,7 @@ export function TechnicalFeatures() {
           </Title>
         </Stack>
 
-        <SimpleGrid cols={{ base: 1, lg: 3 }} spacing={40} verticalSpacing={60}>
+        <SimpleGrid cols={{ base: 1, md: 2, lg: 3 }} spacing={40} verticalSpacing={60}>
           {/* Left Column */}
           <Stack gap={60} justify="center">
             {/* Feature 1 */}

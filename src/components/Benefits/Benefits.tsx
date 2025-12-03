@@ -108,7 +108,7 @@ export function Benefits() {
           {/* Right Column: Image Collage */}
 
           <Grid>
-            <Grid.Col span={{ base: 6, md: 6 }}>
+            <Grid.Col span={{ base: 12, xs: 6, md: 6 }}>
               <motion.div
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -126,13 +126,13 @@ export function Benefits() {
                 </Box>
               </motion.div>
             </Grid.Col>
-            <Grid.Col span={{ base: 6, md: 6 }}>
+            <Grid.Col span={{ base: 12, xs: 6, md: 6 }}>
               <motion.div
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                style={{ marginTop: '100%' }}
+                style={{ marginTop: '40px' }}
               >
                 <Box h={250} bg="#E9ECEF" style={{ borderRadius: '16px', overflow: 'hidden' }}>
                   <Image
@@ -145,7 +145,7 @@ export function Benefits() {
                 </Box>
               </motion.div>
             </Grid.Col>
-            <Grid.Col span={{ base: 6, md: 6 }}>
+            <Grid.Col span={{ base: 12, md: 12 }}>
               <motion.div
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
