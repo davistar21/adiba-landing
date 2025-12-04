@@ -24,7 +24,7 @@ export function Banner() {
                   marginBottom: '1rem',
                 }}
               >
-                <Text span inherit fw={700}>
+                <Text span inherit fw={600}>
                   Leading fintechs
                 </Text>{' '}
                 across the world run ADIBA applications.
@@ -46,13 +46,18 @@ export function Banner() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'flex-end',
+            }}
           >
             <Button
               size="lg"
               color="#0A112A"
               radius="xl"
               rightSection={<ArrowRight size={20} />}
+              fw={400}
               styles={{
                 root: {
                   backgroundColor: '#0A112A',

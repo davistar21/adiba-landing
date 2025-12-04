@@ -51,7 +51,7 @@ export function OurSolutions() {
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
           >
-            <Text c="#D38C3B" fw={600} style={{ letterSpacing: '1px', textTransform: 'uppercase' }}>
+            <Text c="#D38C3B" fw={500} style={{ textTransform: 'uppercase' }}>
               TRUSTED SOLUTIONS
             </Text>
           </motion.div>
@@ -66,7 +66,7 @@ export function OurSolutions() {
               ta="center"
               style={{
                 fontSize: '3rem',
-                fontWeight: 600,
+                fontWeight: 400,
                 color: '#0A112A',
                 lineHeight: 1.2,
               }}

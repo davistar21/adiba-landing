@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 import { Anchor, Box, Container, Image, SimpleGrid, Stack, Text, Title } from '@mantine/core';
 
 export function About() {
@@ -25,11 +26,7 @@ export function About() {
               transition={{ duration: 0.8, ease: 'easeOut' }}
               viewport={{ once: true }}
             >
-              <Text
-                c="#D38C3B"
-                fw={600}
-                style={{ letterSpacing: '1px', textTransform: 'uppercase' }}
-              >
+              <Text c="#D38C3B" fw={400} style={{ textTransform: 'uppercase' }}>
                 ABOUT ADIBA
               </Text>
 
@@ -40,7 +37,7 @@ export function About() {
                   marginBottom: '1rem',
                 }}
                 fz={{ base: '2rem', md: '2.5rem' }}
-                fw={600}
+                fw={400}
               >
                 Innovate Faster, Cheaper
               </Title>
@@ -66,8 +63,21 @@ export function About() {
                 financial data.
               </Text>
 
-              <Anchor href="#" c="#0A112A" fw={500} mt="md" underline="hover">
-                Explore our APIs &rarr;
+              <Anchor
+                href="#"
+                c="#0A112A"
+                fw={400}
+                mt="md"
+                underline="hover"
+                styles={{
+                  root: {
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                  },
+                }}
+              >
+                Explore our APIs <ArrowRight size={16} />
               </Anchor>
             </motion.div>
           </Stack>

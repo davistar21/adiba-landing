@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { ChevronRight } from 'lucide-react';
 import {
   Box,
   Button,
@@ -28,8 +29,8 @@ export function Hero() {
                   lineHeight: 1.2,
                   color: '#0A112A', // Dark navy from theme/image
                 }}
-                fz={{ base: '2.5rem', md: '3.5rem' }}
-                fw={600}
+                fz={{ base: '2.5rem', md: '2.5rem' }}
+                fw={400}
               >
                 Your Turnkey Banking Platform for{' '}
                 <Text component="span" c="#D38C3B" inherit>
@@ -64,9 +65,15 @@ export function Hero() {
                   size="lg"
                   color="#0A112A"
                   radius="md"
+                  fw={400}
                   styles={{
                     root: { backgroundColor: '#0A112A' },
                   }}
+                  rightSection={
+                    <span>
+                      <ChevronRight size={16} />
+                    </span>
+                  }
                 >
                   Start Now
                 </Button>
@@ -74,7 +81,12 @@ export function Hero() {
                   variant="subtle"
                   size="lg"
                   color="#0A112A"
-                  rightSection={<span>&rarr;</span>}
+                  fw={400}
+                  rightSection={
+                    <span>
+                      <ChevronRight size={16} />
+                    </span>
+                  }
                 >
                   Learn More
                 </Button>

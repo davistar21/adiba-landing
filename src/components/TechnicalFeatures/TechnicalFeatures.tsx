@@ -13,6 +13,7 @@ import {
   ThemeIcon,
   Title,
 } from '@mantine/core';
+import classes from './TechnicalFeatures.module.css';
 
 const features = [
   {
@@ -54,20 +55,10 @@ export function TechnicalFeatures() {
         // backgroundRepeat: 'no-repeat',
       }}
     >
-      <Image
-        src="/curly-rectangle-bg.png"
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'contain',
-        }}
-      />
+      <Image src="/curly-rectangle-bg.png" className={classes['curly-rectangle']} />
       <Container size="xl" style={{ position: 'relative', zIndex: 1 }}>
         <Stack align="center" gap="md" mb={80}>
-          <Text c="#D38C3B" fw={600} style={{ letterSpacing: '1px', textTransform: 'uppercase' }}>
+          <Text c="#D38C3B" fw={400} style={{ textTransform: 'uppercase' }}>
             TECHNICAL FEATURES
           </Text>
           <Title
@@ -75,7 +66,7 @@ export function TechnicalFeatures() {
             ta="center"
             style={{
               fontSize: '3rem',
-              fontWeight: 600,
+              fontWeight: 400,
               color: '#0A112A',
             }}
           >
@@ -100,7 +91,7 @@ export function TechnicalFeatures() {
                     return <Icon size={30} color="#D38C3B" />;
                   })()}
                 </ThemeIcon>
-                <Text fw={700} size="xl" c="#D38C3B" mb="sm">
+                <Text fw={500} size="xl" c="#D38C3B" mb="sm">
                   {features[0].title}
                 </Text>
                 <Text size="sm" c="dimmed" lh={1.6}>
@@ -123,7 +114,7 @@ export function TechnicalFeatures() {
                     return <Icon size={30} color="#D38C3B" />;
                   })()}
                 </ThemeIcon>
-                <Text fw={700} size="xl" c="#D38C3B" mb="sm">
+                <Text fw={500} size="xl" c="#D38C3B" mb="sm">
                   {features[2].title}
                 </Text>
                 <Text size="sm" c="dimmed" lh={1.6}>
@@ -134,13 +125,13 @@ export function TechnicalFeatures() {
           </Stack>
 
           {/* Center Column - Phone Image */}
-          <Box style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <Box className={classes['phone-image']}>
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true, amount: 0.5 }}
-              style={{ width: '100%', maxWidth: '400px' }}
+              style={{ width: '100%', maxWidth: '700px' }}
             >
               <Image src="/tilted-phone.png" w="100%" />
             </motion.div>
@@ -162,7 +153,7 @@ export function TechnicalFeatures() {
                     return <Icon size={30} color="#D38C3B" />;
                   })()}
                 </ThemeIcon>
-                <Text fw={700} size="xl" c="#D38C3B" mb="sm">
+                <Text fw={500} size="xl" c="#D38C3B" mb="sm">
                   {features[1].title}
                 </Text>
                 <Text size="sm" c="dimmed" lh={1.6}>
@@ -185,7 +176,7 @@ export function TechnicalFeatures() {
                     return <Icon size={30} color="#D38C3B" />;
                   })()}
                 </ThemeIcon>
-                <Text fw={700} size="xl" c="#D38C3B" mb="sm">
+                <Text fw={500} size="xl" c="#D38C3B" mb="sm">
                   {features[3].title}
                 </Text>
                 <Text size="sm" c="dimmed" lh={1.6}>

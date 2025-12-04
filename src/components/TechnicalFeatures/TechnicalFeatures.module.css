@@ -1,0 +1,21 @@
+.phone-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.curly-rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .phone-image {
+    display: none;
+  }
+  .curly-rectangle {
+    display: none;
+  }
+}
